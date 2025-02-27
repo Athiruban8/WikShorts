@@ -55,8 +55,26 @@ export function WikiCard({ article }: WikiCardProps) {
                     <div className="absolute inset-0 bg-gray-900" />
                 )}
                 <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/90" />
-                <div className="absolute bottom-10 left-6 right-6 text-white">
-                    <h2 className="text-2xl font-bold mb-2">{article.displaytitle}</h2>
+                    <div className="absolute bottom-20 left-6 right-6 text-white">
+                        <div className='flex justify-between'>
+                            <h2 className="text-2xl font-bold mb-2">{article.displaytitle}</h2>
+                            <div className="flex gap-3 right-6">
+                                <button
+                                    onClick={() => toggleLike(article)}
+                                    className={`p-2 rounded-full transition-colors ${isLiked(article.pageid) ? 'bg-red-500 hover:bg-red-600' : 'bg-white/10 hover:bg-white/20'}`}
+                                    aria-label="Like article"
+                                    >
+                                        <Heart className={`w-5 h-5 ${isLiked(article.pageid) ? 'fill-white' : ''}`} />
+                                </button>
+                                <button
+                                    onClick={handleShare}
+                                    className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+                                    aria-label="Share article"
+                                    >
+                                    <Share2 className="w-5 h-5" />
+                                </button>
+                            </div>
+                        </div>
                     <p className="text-sm text-gray-300 mb-4 line-clamp-4">{article.extract}</p>
                     <div className="flex items-center justify-between">
                         <a
@@ -67,22 +85,6 @@ export function WikiCard({ article }: WikiCardProps) {
                         >
                             Read more →
                         </a>
-                        <div className="flex gap-3">
-                            <button
-                                onClick={() => toggleLike(article)}
-                                className={`p-2 rounded-full transition-colors ${isLiked(article.pageid) ? 'bg-red-500 hover:bg-red-600' : 'bg-white/10 hover:bg-white/20'}`}
-                                aria-label="Like article"
-                            >
-                                <Heart className={`w-5 h-5 ${isLiked(article.pageid) ? 'fill-white' : ''}`} />
-                            </button>
-                            <button
-                                onClick={handleShare}
-                                className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
-                                aria-label="Share article"
-                            >
-                                <Share2 className="w-5 h-5" />
-                            </button>
-                        </div>
                     </div>
                 </div>
             </div>
