@@ -72,7 +72,7 @@ function App() {
       <div className="fixed top-4 left-4 z-50">
         <button
           onClick={() => window.location.reload()}
-          className="text-2xl font-bold text-white drop-shadow-lg hover:opacity-80 transition-opacity"
+          className="text-4xl cursor-pointer font-bold text-white drop-shadow-lg hover:opacity-80 transition-opacity"
         >
           WikShorts
         </button>
@@ -81,7 +81,7 @@ function App() {
       <div className="fixed top-4 right-4 z-50 flex flex-col items-end gap-2">
         <button
           onClick={() => setShowLikes(!showLikes)}
-          className="text-sm text-white/70 hover:text-white transition-colors"
+          className="text-sm text-white/70 hover:text-white transition-colors cursor-pointer"
         >
           Likes
         </button>
@@ -93,7 +93,7 @@ function App() {
           <div className="bg-gray-900 z-[41] p-6 rounded-lg w-full max-w-2xl h-[80vh] flex flex-col relative">
             <button
               onClick={() => setShowLikes(false)}
-              className="absolute top-2 right-2 text-white/70 hover:text-white"
+              className="absolute -top-3 -right-3 w-8 h-8 cursor-pointer bg-gray-800 text-white/70 hover:text-white hover:bg-gray-700 rounded-full shadow-lg"
             >
               ✕
             </button>
@@ -154,7 +154,7 @@ function App() {
                           </a>
                           <button
                             onClick={() => toggleLike(article)}
-                            className="text-white/50 hover:text-white/90 p-1 rounded-full md:opacity-0 md:group-hover:opacity-100 transition-opacity"
+                            className="text-white/50 hover:text-white/90 cursor-pointer p-1 rounded-full md:opacity-0 md:group-hover:opacity-100 transition-opacity"
                             aria-label="Remove from likes"
                           >
                             <X className="w-4 h-4" />

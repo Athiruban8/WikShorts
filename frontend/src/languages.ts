@@ -189,6 +189,13 @@ export const LANGUAGES = [
     article: "https://sv.wikipedia.org/wiki/",
   },
   {
+    id: "ta",
+    name: "தமிழ்",
+    flag: "https://hatscripts.github.io/circle-flags/flags/in.svg",
+    api: "https://ta.wikipedia.org/w/api.php?",
+    article: "https://ta.wikipedia.org/wiki/",
+  },
+  {
     id: "th",
     name: "ไทย",
     flag: "https://hatscripts.github.io/circle-flags/flags/th.svg",

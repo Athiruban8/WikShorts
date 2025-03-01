@@ -5,7 +5,7 @@
   
   .article-container:focus,
   .article-container:focus-within {
-    outline: 2px solid #007AFF;
+    outline: 2px ;
     outline-offset: 2px;
   }
   

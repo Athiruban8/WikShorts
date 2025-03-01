@@ -29,8 +29,8 @@ export function LanguageSelector() {
       onClick={() => setShowDropdown(!showDropdown)}
       ref={dropdownRef}
     >
-      <button className="text-sm text-white/70 hover:text-white transition-colors">
-        Language
+      <button className="text-sm text-white/70 hover:text-white transition-colors cursor-pointer">
+        Languages
       </button>
 
       {showDropdown && (

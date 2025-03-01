@@ -1,0 +1,42 @@
+.wikipedia-style {
+    font-family: "Georgia", "Times New Roman", serif;
+    line-height: 1.6;
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Wikipedia content styles */
+  .wikipedia-content h1, .wikipedia-content h2, .wikipedia-content h3 {
+    font-family: "Linux Libertine", "Georgia", serif;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  .wikipedia-content p {
+    margin-bottom: 16px;
+    text-align: justify;
+  }
+  
+  .wikipedia-content ul, .wikipedia-content ol {
+    padding-left: 20px;
+    margin-bottom: 16px;
+  }
+  
+  .wikipedia-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+  }
+  
+  .wikipedia-content a {
+    color: #0645AD; /* Wikipedia blue */
+    text-decoration: none;
+  }
+  
+  .wikipedia-content a:hover {
+    text-decoration: underline;
+  }
+  

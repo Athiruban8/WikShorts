@@ -90,5 +90,34 @@ export function useWikiArticles() {
     }
   }, [buffer]);
 
-  return { articles, loading, fetchArticles: getMoreArticles };
+  const fetchFullArticle = useCallback(async (pageid: number): Promise<string> => {
+    try {
+      console.log("Fetching full article for pageid:", pageid);
+      
+      const response = await fetch(
+        currentLanguage.api +
+          new URLSearchParams({
+            action: "parse",
+            format: "json",
+            pageid: pageid.toString(),
+            prop: "text",
+            origin: "*",
+          })
+      );
+
+      if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+
+      const data = await response.json();
+      console.log("Full article response:", data);
+
+      return data.parse?.text?.["*"] || "<p>Failed to load article.</p>";
+    } catch (error) {
+      console.error("Error fetching full article:", error);
+      return "<p>Failed to load article.</p>";
+    }
+  }, [currentLanguage.api]);
+  
+
+  return { articles, loading, fetchArticles: getMoreArticles, fetchFullArticle };
 }
+
