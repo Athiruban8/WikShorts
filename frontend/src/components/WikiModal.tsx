@@ -52,7 +52,7 @@ export function WikiModal({ title, pageid, isOpen, onClose }: WikiModalProps) {
           </button>
 
           {/* Article Content */}
-          <div className="min-w-full h-full p-6 bg-white text-black overflow-y-auto wikipedia-style">
+          <div className="w-full h-full p-6 bg-white text-black overflow-y-auto wikipedia-style">
             <h2 className="text-3xl font-bold mb-4 text-center">{title}</h2>
             {/* <a
               href={article.url}
